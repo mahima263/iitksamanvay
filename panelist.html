@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IITK Samanvay 2025 – Panelists</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --brand: #0c3d57;
+      --brand-dark: #095d62;
+      --brand-light: #3fadc5;
+      --ink: #0c3d57;
+      /* navbar bg from your earlier code */
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding-top: 64px;
+      background: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .nav-link,
+    .navbar-brand {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    /* Navbar */
+    .bg-navy {
+      background-color: var(--ink) !important;
+    }
+
+    .navbar-brand {
+      font-size: 1.35rem;
+      color: #87CEEB !important;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      transition: color .25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #87CEEB !important;
+    }
+
+    .btn-brand {
+      background: var(--brand);
+      border: none;
+      border-radius: 999px;
+      font-size: 16px;
+      padding: 10px 18px;
+      transition: transform .15s ease, background-color .25s ease, box-shadow .25s ease;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(14, 119, 126, .25);
+    }
+
+    .btn-brand:hover {
+      background: var(--brand-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Banner */
+    .banner {
+      position: relative;
+      height: 420px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('images/About.JPG') center/cover no-repeat;
+      transform: scale(1.05);
+      filter: brightness(.8);
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(12, 61, 87, .35), rgba(14, 119, 126, .55));
+    }
+
+    .banner h1 {
+      position: relative;
+      z-index: 1;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    .banner .chip {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin-top: .5rem;
+      background: rgba(255, 255, 255, .2);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, .35);
+      color: #fff;
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      font-size: .9rem;
+    }
+
+    /* Section heading */
+    .section-head {
+      text-align: center;
+      margin: 50px 0 20px;
+    }
+
+    .section-head h2 {
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    /* Panel filter (no search as requested) */
+    .panel-tabs {
+      gap: .8rem;
+    }
+
+    .panel-tabs .btn {
+      border-radius: 999px;
+      font-size: 1.5rem;
+      padding: 6px 14px
+    }
+
+    .panel-tabs .btn:hover {
+      background: var(--brand);
+      color: #fff;
+    }
+
+
+
+    /* Cards */
+    .panelist-card {
+      border: none;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      height: 100%;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .panelist-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+    }
+
+    .panelist-card .thumb {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panelist-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      background: #eef3f6;
+    }
+
+    .panelist-card .panel-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #ffffff;
+      color: var(--brand);
+      border: 1px solid rgba(14, 119, 126, .2);
+      border-radius: 999px;
+      padding: .25rem .6rem;
+      font-size: .8rem;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+    }
+
+    .panelist-card .card-body {
+      text-align: center;
+      padding: 16px 14px 18px;
+    }
+
+    .panelist-card h5 {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: .25rem;
+      color: #1c2b36;
+    }
+
+    .panelist-card p {
+      margin: 0;
+      font-size: .92rem;
+      color: #55626d;
+    }
+
+    .panelist-card .actions {
+      margin-top: 12px;
+    }
+.speaker-name {
+  font-size: 2rem;   /* bada font */
+  font-weight: 600;    /* thoda bold */
+  color: #222;         /* dark text */
+}
+
+.speaker-designation {
+  color: #0e537e;      /* aapka theme color use kiya */
+  font-size: 1rem;     /* thoda readable */
+  margin-bottom: 6px;  /* spacing */
+}
+.moderator-badge {
+  display: inline-block;
+  background: #0f6594;   /* Theme color */
+  color: #ffffff;        /* Text color */
+  font-size: 0.9rem;     /* Font size (bada/chhota karne ke liye badal sakte ho) */
+  font-weight: 600;      /* Bold */
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin: 6px 0 10px;
+}
+
+    /* Divider chip between panel groups */
+    .panel-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  color: var(--brand);
+  padding: .50rem 2rem;
+  font-size: 2rem;
+}
+.btn-secondary:hover {
+  background-color: var(--brand-light) !important;  /* teal blue shade */
+  border-color: var(--brand-light) !important;
+  color: #fff !important;
+}
+
+
+    /* Footer */
+    footer {
+      background: var(--brand);
+      color: #fff;
+      text-align: center;
+      padding: 16px 0;
+      margin-top: 56px;
+    }
+
+    /* Utility */
+    .maxw-900 {
+      max-width: 900px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-navy fixed-top shadow-sm">
+    <div class="container-fluid px-3 px-md-4">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5ba05fefa09f9ac3547f72690a69cbac4121958b7fa7945e05c279aa8fff4d9?placeholderIfAbsent=true&apiKey=7d949aa1dc994effbe87c307541c13c8"
+          alt="Samanvay Logo" width="56" height="56" class="d-inline-block align-text-top rounded-circle">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://iitk.ac.in/dora/iitk-samanvay-2025/iitk-samanvay-agenda-2025.pdf"
+              target="_blank" rel="noopener noreferrer">Agenda</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="panelist.html">Panelists</a></li>
+          <li class="nav-item"><a class="nav-link" href="#featured-destinations">Highlights</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a href=" https://zfrmz.in/0rb8QnYvfzhguWQmcYiv" target="_blank"
+              class="btn btn-brand w-100 text-white text-decoration-none">REGISTER NOW</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner text-center">
+    <div class="container position-relative">
+      <h1 class="display-5">MEET THE PANELISTS</h1>
+      <div class="chip">IITK SAMANVAY 2025 · 2–3 Sept</div>
+    </div>
+  </section>
+
+  <!-- Optional panel tabs (no search) -->
+  <div class="container py-4">
+    <div class="d-flex flex-wrap justify-content-center panel-tabs">
+      <button class="btn btn-outline-secondary btn-sm" data-panel-filter="all">All</button>
+      <button class="btn btn-outline-secondary btn-sm" data-panel-filter="Panel 1">Panel 1 </button>
+      <button class="btn btn-outline-secondary btn-sm" data-panel-filter="Panel 2">Panel 2</button>
+      <button class="btn btn-outline-secondary btn-sm" data-panel-filter="Panel 3">Panel 3</button>
+    </div>
+  </div>
+  <div id="keynoteContainer" class="my-5"></div>
+
+  <!-- Panelists -->
+  <div class="container pb-4" id="panelistContainer"></div>
+
+  <footer>
+    <p class="mb-0">&copy; 2025 IIT Kanpur | Samanvay</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Data + Script -->
+  <script>
+     const keynoteSpeaker = {
+  name: "Dr. Harrick Vin",
+  designation: "Chief Technology Officer",
+  organization: "Tata Consultancy Services (TCS)",
+  image: "Harrick Vin.jpg",
+  bio: `Dr. Harrick Vin is the Chief Services Innovation Officer at Tata Consultancy Services (TCS), a TCS Fellow, FNAE Fellow, and Distinguished Alumnus of IIT Bombay.
+He was the Founder & CEO of Digitate, where he led the design of ignio™, the world’s first cognitive automation product for enterprise IT. Earlier, he served as Vice President & Chief Scientist at TRDDC (TCS).
+
+Before TCS, he spent 15 years as Professor of Computer Sciences at the University of Texas at Austin, founding research labs in distributed systems and multimedia computing.
+
+Over his career, he has pioneered innovations in distributed systems, video-over-IP, digital media, predictive analytics, and enterprise IT transformation.
+He has authored 125+ research papers and filed 45 patents.
+He holds a PhD in Computer Science from UC San Diego and B.Tech. from IIT Bombay.`
+};
+   const panelists = [
+      // Panel 1
+      { name: "Prof. Ashutosh Modi | MODERATOR", designation: "Associate Professor,<br/> CSE", organization: "IIT Kanpur", panel: "Panel 1",image: "Ashutosh.jpeg", bio: "Prof. Ashutosh Modi is an Associate Professor in the Computer Science & Engineering Department at IIT Kanpur, specializing in Natural Language Processing, Machine Learning, and Affective Computing. He completed his Ph.D. at Saarland University, Germany, under the guidance of Prof. Manfred Pinkal and Dr. Ivan Titov. Prior to joining IIT Kanpur, he carried out postdoctoral research at Disney Research in Pittsburgh, Los Angeles, and Zurich, working on multimodal affective computing, conversational systems, and natural language understanding." },
+
+      { name: "Mr. Abhishek Lahiri", designation: "Vice President & Head, Government Affairs", organization: "MasterCard", panel: "Panel 1", image: "Speakers/Panel 1/Abhishek Lahiri.jpg", bio: "Abhishek Lahiri is Vice President & Head of Government Affairs at MasterCard South Asia, part of the South Asia Leadership Team. With nearly two decades of experience, he has worked in policy leadership roles at Google, Amazon, Meta, PwC and KPMG. He has led advocacy and regulatory engagements in fintech, payments, e-commerce, AI, cloud, and digital trade across India, South Asia, Africa, Middle East and South Pacific." },
+
+      { name: "Mr. Anand Srivastava", designation: "VP & Global Service Line Lead for Applications",organization: "DXC Technology",  panel: "Panel 1", image: "Speakers/Panel 1/Anand Srivastava.jpg", bio: "Anand Srivastava is VP and Global Leader – Application & AI Service Line at DXC Technology, leading a global team of 25,000 professionals delivering AI-driven application development, modernization, and testing services. With over 25 years of experience, he has held leadership roles at IBM, Wipro, and Infosys, driving large-scale digital transformation across industries like financial services, healthcare, manufacturing, and public sector. He holds a Postgraduate degree in AI from the University of Texas, along with PGDBA (Finance) from Symbiosis and B.Tech (Hons.) from GB Pant University." },
+      { name: "Mr. Pramod Kumar", designation: "General Manager <br/> Corporate R&D Center",organization: "Hindustan Petroleum Corporation Ltd.", panel: "Panel 1", image: "Speakers/Panel 1/Pramod Kumar.jpg", bio: "Pramod Kumar is General Manager at the Corporate R&D Center, Hindustan Petroleum Corporation Ltd., Bangalore. With over 24 years of experience in petroleum refining, catalyst scale-up, biomass conversion, HCNG technology and CFD studies, he has led the scale-up and commercialization of several breakthrough technologies. An IIT Kanpur M.Tech in Chemical Engineering, he holds 30+ patents to his credit." },
+      { name: "Mr. Yogesh Kumar",designation: "VP – Technology & India, Engineering Center Leader", organization: "Wabtec Corporation", panel: "Panel 1", image: "Speakers/Panel 1/Yogesh Kumar.jpg", bio: "Yogesh Kumar is Vice President – Technology & India Engineering at Wabtec India Technology & Engineering Center (WITEC), Bangalore, leading a team of 450+ engineers across global locomotive programs. With extensive experience in mechanical, electrical, software, and data analytics domains, he has driven innovation and capacity building for freight and transit businesses worldwide. A certified Six Sigma Black Belt, Yogesh has received GE India’s Pillar Award from Dr. APJ Abdul Kalam and the Edison Pioneer Award. He holds an MS in Mechanical Engineering from Gannon University and a B.Tech from NIT Trichy." },
+      { name: "Mr. Anand Kr Sinha", designation: "Researcher and Business Leader",organization: "", panel: "Panel 1", image: "Speakers/Panel 1/Anand Kr Sinha.jpg", bio: "Anand has led multi-country teams in strategy and execution, focusing on product innovation and customer success." },
+
+      // Panel 2
+      { name: "Prof. Ashish Garg | MODERATOR",designation: "HOD - Sustainable Energy Engineering",organization: "IIT Kanpur", panel: "Panel 2", image: "Speakers/Panel 2/Prof. Ashish Garg (1).png", bio: "At the Kotak School of Sustainability and Kesavan Center, IIT Kanpur, Prof. Ashish Garg advances research in materials science and engineering. His interests include functional materials for energy storage, nanotechnology, and sustainable innovations for next-generation technologies." },
+      // { name: "Ms. Akshita Shukla", designation: "Thought Leader",panel: "Panel 2", image: "images/akshita.jpg", bio: "Akshita works at the intersection of policy, product, and inclusion—enabling equitable access through digital platforms." },
+      { name: "Dr. Sabine Kapasi", designation: "CEO & Managing Director",organization: "Enira Consulting", panel: "Panel 2", image: "Speakers/Panel 2/Dr._Sabine_Profile.jpg", bio: "Dr. Kapasi is a globally recognized healthcare strategist with over 15 years of experience in public health policy, digital innovation, and sustainable healthcare models. Clinically trained as a gynecologist and IVF specialist, she has advised the UN Emergency Response Strategy Team, WHO, national governments, and global health programs across 197 countries. She is the CEO & Managing Director of Enira Consulting and also leads ROPAN, an AI-powered digital health platform. Dr. Kapasi holds degrees from Wharton, MIT, NYU Stern, and is a Harvard Business School Fellow." },
+      { name: "Mr. Himanshi Shekhar Panigrahi", designation: "Senior Manager - CSR",organization: "Hindustan Copper Limited", panel: "Panel 2", image: "Speakers/Panel 2/Himanshu Sekhar Panigrahi.jpg", bio: "Himanshu Sekhar Panigrahi is a development professional with over 22 years of experience in CSR, Sustainability, Project Management, and Capacity Building. He has led projects across government, PSU, consulting, academia, and NGOs in areas like food security, rural employment, social inclusion, and environment. Widely published on CSR and sustainable development, he has received multiple awards including the 100 Most Impactful CSR Leaders (World CSR Day) and the Dr. APJ Abdul Kalam Leadership Award. He is currently Senior Manager (CSR) at Hindustan Copper Limited." },
+      { name: "Mr. M S Srikanth", designation: "Senior Manager - CSR", organization: "Indian Oil Corporation Limited",panel: "Panel 2", image: "Speakers/Panel 2/M. S. Srikanth.jpg", bio: "M. S. Srikanth is Senior Manager – Corporate Social Responsibility at Indian Oil Corporation Limited (IOCL), Head Office, Noida. With over 11 years of experience in CSR, he has led award-winning, high-impact initiatives across education, skill development, and livelihood enhancement. An alumnus of NIT Rourkela, he is also an ESG & CSR Leadership Scholar from XLRI Jamshedpur and the Azim Premji Foundation. He has worked with IITs, IISc, and social enterprises, while mentoring over 60 CSR professionals nationwide." },
+      { name: "Ms. Neepa Sharma", designation: "General Manager - CSR",organization:"CESC Limited ", panel: "Panel 2", image: "Speakers/Panel 2/Neepa Sharma.jpg", bio: "Dr. Neepa Saha Sharma is General Manager – CSR at CESC Limited (RP-Sanjiv Goenka Group) with over 25 years of experience in CSR, sustainability, and development. She has led impactful initiatives in community empowerment, human resource development, and environmental sustainability. An author and speaker on socio-economic issues, she wrote Primary Health Care System in India (2021). A PhD in Public Administration and IICA-certified ESG Impact Leader, she was honored with the National Power-Gen Woman Icon of the Year Award (2024)." },
+      { name: "Mr. Ramesh Kumar Kajaria", designation: "CSR Lead",organization:"Kajaria Ceramics Limited", panel: "Panel 2", image: "Speakers/Panel 2/Ramesh KD.jpg", bio: "Mr. Ramesh KD is Corporate Social Responsibility Lead at Kajaria Ceramics Limited, New Delhi, with over 10 years of experience in CSR. An International Exchange Alumni and Global Changemaker Fellow, he has spearheaded impactful initiatives in education, healthcare, sanitation, and skill development. Holding a PG Diploma in CSR, he has worked with the US Department of State, Escorts Kubota, and since 2019 with Kajaria Ceramics. He has received multiple honors including the US Presidential Volunteer Service Award and the IHRO National Award (2023)." },
+      { name: "Ms. Sanchita Vaish", designation: "Company Secretary & CSR Lead",organization:"Baker Hughes", panel: "Panel 2", image: "Speakers/Panel 2/Sanchita_.jpg", bio: "Sanchita Vaish is a Company Secretary at Baker Hughes, Gurugram, with over 9 years of experience handling corporate governance matters across India, Bangladesh, and North Africa. She has also led CSR initiatives at Baker Hughes, earning six national and international awards, including recognition as one of the Most Impactful CSR Leaders in the Industry. A passionate communicator, she is an active member of Toastmasters International, a Josh Talk Speaker, and a published author." },
+      { name: "Mr. Subhendu Kesh", designation: "VP – Digital and Chief Information Officer",organization:"JK Paper Limited", panel: "Panel 2", image: "Speakers/Panel 2/Subhendu.jpeg", bio: "Subhendu Kesh is Vice President – Digital and Chief Information Officer at JK Paper Limited, with over 29 years of experience in business technology, digital transformation, and process excellence. He has led award-winning initiatives, including the FICCI Industry 4.0 Platinum Award (2022), driving digitization, data analytics, IoT, RPA, and automation across industries. Previously, he has held senior leadership roles at Nuvoco Vistas, Lafarge, Holcim, Areva, ABB, Schneider Electric, and Modi Continental, delivering large-scale IT and business transformation programs globally." },
+
+      // { name: "Tara Chand", designation: "Industry Expert", panel: "Panel 2", image: "images/tara.jpg", bio: "Specialist in industrial automation and lean manufacturing with on‑ground implementation experience." },
+
+      // Panel 3
+      { name: "Prof. Deepu Philip | MODERATOR", designation:"Professor, IME", organization:"IIT Kanpur", panel: "Panel 3", image: "speaker-philip-deepu.jpg", bio: "Mr. Gaurav Pilania is Director of Hans Energy Systems Pvt. Ltd., Mars (India) Antennas & RF Systems Pvt. Ltd., and Hans Geofisica Consultores Pvt. Ltd. With over 15 years of experience across defense, rail, power, healthcare, automotive, and emerging sectors like EV, green energy, and semiconductors, he brings global exposure from China, Israel, and Germany. He also serves as Vice Chairman of CII Kanpur Zone and as a Board Member, Institute Management Committee – National Skills Training Institute, driving industrial growth and innovation in Uttar Pradesh." },
+      { name: "Mr. Gaurav Pilania", designation:"Director", organization:"Hans Energy Systems Pvt. Ltd.", panel: "Panel 3", image: "Speakers/Panel 3/Gaurav P, Hans Energy.jpg", bio: "Mr. Gaurav Pilania is Director of Hans Energy Systems Pvt. Ltd., Mars (India) Antennas & RF Systems Pvt. Ltd., and Hans Geofisica Consultores Pvt. Ltd. With over 15 years of experience across defense, rail, power, healthcare, automotive, and emerging sectors like EV, green energy, and semiconductors, he brings global exposure from China, Israel, and Germany. He also serves as Vice Chairman of CII Kanpur Zone and as a Board Member, Institute Management Committee – National Skills Training Institute, driving industrial growth and innovation in Uttar Pradesh." },
+      { name: "Mr. Manish Kankani", designation: "CEO",organization:"Qualtech Consultants", panel: "Panel 3", image: "Speakers/Panel 3/Manish Kankani.jpg", bio: "Manish Kankani is the Founder & CEO of Qualtech Consultants, with over 20 years of experience in fintech and insurtech innovation. An IIT Kanpur alumnus, he has built and scaled digital lending, leasing, and insurance solutions for leading BFSI clients. At Qualtech, he leads digital transformation through cloud-based platforms, API-driven architectures, and process automation, enabling efficiency, risk management, and superior customer experience." },
+      { name: "Mr. Mukul Jain", designation: "Founder",organization:"MTree Software Pvt. Ltd", panel: "Panel 3", image: "Speakers/Panel 3/Mukul Jain.jpg", bio: "Mukul Jain, an IIT Kanpur alumnus (B.Tech, Electrical Engg., 1981), has over 40 years of experience in building software products and scaling technology services businesses. He began his career with HCL’s R&D team, later driving growth at HCL Technologies, and serving as COO at GlobalLogic. Currently, he is the Founder of MTree Software, an angel investor, and a mentor to start-ups, with a focus on AI/ML-driven business solutions." },
+    ];
+    function renderKeynoteSpeaker(speaker) {
+  const keynoteContainer = document.getElementById('keynoteContainer');
+
+  keynoteContainer.innerHTML = `
+    <div class="section-head">
+      <span class="panel-chip">Keynote Speaker</span>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="card keynote-card shadow-lg p-3">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="${speaker.image}" 
+                   alt="${speaker.name}" 
+                   class="img-fluid rounded" 
+                   onerror="this.src='https://via.placeholder.com/400x400?text=Image+coming+soon';" />
+            </div>
+           <div class="col-md-8">
+  <h4 class="card-title mb-2 speaker-name">${speaker.name}</h4>
+  <p class="card-text mb-2 speaker-designation"><strong>${speaker.designation}</strong></p>
+  <p class="card-text mb-2"><em>${speaker.organization}</em></p>
+  <p class="card-text mb-2" style="text-align:justify;">${speaker.bio}</p>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+    const container = document.getElementById('panelistContainer');
+
+    function renderPanelists(list) {
+      container.innerHTML = '';
+
+      // Group by panel
+      const grouped = {};
+      list.forEach(p => { (grouped[p.panel] ||= []).push(p); });
+
+      Object.keys(grouped).sort().forEach(panel => {
+        const group = grouped[panel];
+
+        // Section heading with chip style
+        const head = document.createElement('div');
+        head.className = 'section-head';
+        // Subtitles for each panel
+        const subtitles = {
+  "Panel 1": "Co-Inventing the Future: Translational Research in AI, Sustainability & Cybersecurity",
+  "Panel 2": "Purpose-Driven Technology: Using CSR to Fuel Innovation in AI, Sustainability & Cybersecurity",
+  "Panel 3": "Crafting the Future: How MSMEs and academia can shape a Self-Reliant India"
+};
+
+head.innerHTML = `
+  <span class="panel-chip" style="display:block; text-align:center;">
+    <strong>${panel}</strong>
+    <div style="font-weight:normal; font-size:1.5rem; color:#000; margin-top:4px;">
+      ${subtitles[panel] || ''}
+    </div>
+  </span>
+`;
+
+container.appendChild(head);
+
+        const row = document.createElement('div');
+        row.className = 'row g-4';
+
+        group.forEach(p => {
+          const col = document.createElement('div');
+          col.className = 'col-12 col-sm-6 col-md-3';
+          col.innerHTML = `
+            <div class="card panelist-card h-100">
+  <div class="thumb">
+    <img src="${p.image}" alt="${p.name}" loading="lazy"
+      onerror="this.src='https://via.placeholder.com/600x400?text=Image+coming+soon';" />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">${p.name}</h5>
+        ${p.role ? `<span class="badge moderator-badge">${p.role}</span>` : ""}
+
+    <p class="card-text">${p.designation}</p>
+    <p class="card-text"><strong>${p.organization || ''}</strong></p>
+
+
+    <div class="actions">
+      <button class="btn btn-sm btn-brand"
+        data-read-more='${JSON.stringify(p).replace(/'/g, "&apos;")}'
+        data-bs-toggle="modal" data-bs-target="#bioModal">
+        Read More
+      </button>
+    </div>
+  </div>
+</div>
+
+          `;
+          row.appendChild(col);
+        });
+
+        container.appendChild(row);
+      });
+    }
+    renderKeynoteSpeaker(keynoteSpeaker);
+
+    // Initial render
+    renderPanelists(panelists);
+
+    // Panel tabs filter (All / Panel 1 / Panel 2 / Panel 3)
+    document.querySelectorAll('[data-panel-filter]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-panel-filter');
+        document.querySelectorAll('[data-panel-filter]').forEach(b => b.classList.remove('btn-secondary'));
+        btn.classList.add('btn-secondary');
+        if (key === 'all') renderPanelists(panelists);
+        else renderPanelists(panelists.filter(p => p.panel === key));
+        window.scrollTo({ top: document.getElementById('panelistContainer').offsetTop - 70, behavior: 'smooth' });
+      });
+    });
+
+    // Single Bootstrap modal populated dynamically
+    const bioModal = document.createElement('div');
+    bioModal.className = 'modal fade';
+    bioModal.id = 'bioModal';
+    bioModal.tabIndex = -1;
+    bioModal.setAttribute('aria-hidden', 'true');
+    bioModal.innerHTML = `
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bioTitle">Speaker Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3 align-items-start">
+              <div class="col-12 col-md-5">
+                <img id="bioImage" alt="Speaker photo" class="img-fluid rounded" style="max-height: 320px; object-fit: cover; width: 100%;" />
+              </div>
+              <div class="col-12 col-md-7">
+                <h4 class="mb-1" id="bioName"></h4>
+                <p class="text-muted mb-2" id="bioDesignation"></p>
+                            <p class="text-muted mb-2" id="bioOrganization"></p>
+
+
+                <span class="badge text-bg-light border" id="bioPanel"></span>
+                <hr/>
+                <p id="bioText" class="mb-0"></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>`;
+    document.body.appendChild(bioModal);
+
+    // Delegate click for all Read More buttons
+    document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-read-more]');
+  if (!btn) return;
+
+  try {
+    const data = JSON.parse(btn.getAttribute('data-read-more'));
+    const modalEl = document.getElementById('bioModal');
+
+    modalEl.querySelector('#bioTitle').textContent = data.name;
+    modalEl.querySelector('#bioName').textContent = data.name;
+    modalEl.querySelector('#bioDesignation').textContent = data.designation || '';
+    modalEl.querySelector('#bioOrganization').textContent = data.Org || '';
+
+    modalEl.querySelector('#bioPanel').textContent = data.panel || '';
+    modalEl.querySelector('#bioText').textContent = data.bio || 'Details will be updated soon.';
+
+    const img = modalEl.querySelector('#bioImage');
+    img.src = data.image;
+    img.onerror = () => img.src = 'https://via.placeholder.com/800x600?text=Image+coming+soon';
+  } catch (err) {
+    console.error('Invalid data:', err);
+  }
+});
+
+  </script>
+</body>
+
+</html>

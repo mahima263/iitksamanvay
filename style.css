@@ -1,0 +1,701 @@
+/* ===== Global Styles ===== */
+body {
+    margin: 0;
+    padding-top: 70px; /* space for fixed navbar */
+    font-family: 'Segoe UI', sans-serif;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* ===== Navbar Styles ===== */
+  .bg-navy {
+    background-color: #0c3d57 !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #87CEEB !important;
+  }
+  
+  .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #87CEEB !important;
+  }
+  .btn-primary {
+    background-color: #3fadc5;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #095d62;
+  }
+  
+  /* ===== Banner Section ===== */
+  /* === Default (Large Desktop View) === */
+/* 🌐 Base Styles */
+/* ✅ Banner Section Base Styles */
+
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ✅ Mobile Devices — Portrait Phones */
+@media (max-width: 575.98px) {
+  .banner-section {
+    height: 60vh;
+  }
+
+  .banner-img {
+    object-fit: contain;
+    object-position: top center;
+  }
+}
+
+/* ✅ Small Devices — Landscape Phones */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .banner-section {
+    height: 65vh;
+  }
+
+  .banner-img {
+    object-fit: contain;
+    object-position: top center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner-section {
+    height: 100vh; /* Adjust if needed */
+  }
+}
+
+/* ✅ Tablets — iPads (Mini, Air, Pro, Nest Hub) */
+
+/* ✅ Small Laptops / Desktops */
+@media (min-width: 1025px) and (max-width: 1599.98px) {
+  .banner-section {
+    height: 100vh;
+  }
+
+  .banner-img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* ✅ Extra Large Screens */
+@media (min-width: 1600px) {
+  .banner-section {
+    height: 100vh;
+  }
+
+  .banner-img {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+
+  /* Additional section-specific styles (if needed) */
+#about-section img {
+  border-radius: 12px;
+  object-fit: cover;
+}
+.about-paragraph {
+  text-align: justify;
+  line-height: 1.9;
+}
+/* Add this in your CSS */
+.golden-filter {
+  filter: sepia(30%) saturate(130%) hue-rotate(-10deg) brightness(1.2);
+}
+
+@media (max-width: 767.98px) {
+  .about-paragraph {
+    text-align: justify; /* Switch from justify to left on mobile */
+    font-size: 1rem;  /* Slightly reduce size if needed */
+  }
+}
+
+/*why u should attend?*/
+.attend {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background: url('images/attend.JPG') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 70vh;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center; /* Vertically center content */
+}
+
+.attend::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 35, 59, 0.8); /* Blue transparent overlay */
+  z-index: 0;
+}
+
+.attend > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above overlay */
+}
+
+.attendcontent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+
+.attend h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background-color: #ff6f61;
+  margin: 10px 0 30px;
+}
+
+.attendcard {
+  background: none;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.attendcard:hover {
+  transform: translateY(-5px);
+}
+
+.attendicon img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .attend h2 {
+    font-size: 28px;
+  }
+
+  .attendicon img {
+    width: 50px;
+  }
+
+  .attendcard {
+    padding: 10px;
+  }
+}
+/* timer */
+/* Timer Section */
+.timerbody {
+  background: linear-gradient(135deg, #AEE6F9 0%, #3BAFDA 100%);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  animation: fadeInSection 2s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInSection {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.countdown-box {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  position: relative;
+  flex: 1 1 20%;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.countdown-box:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.6);
+}
+.countdown-box h2 {
+  font-size: 4rem;
+  margin: 0;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+.countdown-box p {
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.countdown-box:hover h2 {
+  transform: scale(1.15);
+}
+@media (max-width: 768px) {
+  .countdown-box {
+      flex: 1 1 45%;
+      padding: 0.5rem;
+  }
+  .countdown-box h2 {
+      font-size: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .countdown-box {
+      flex: 1 1 90%;
+      padding: 0.5rem;
+  }
+  .countdown-box h2 {
+      font-size: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  #countdown-timer .col-md-2 {
+      flex: 1 1 40% !important;
+      max-width: 40%;
+      margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #countdown-timer .col-md-2 {
+      flex: 1 1 80% !important;
+      max-width: 80%;
+  }
+}
+
+/* Button Styling */
+.custom-register-btn {
+  background-color: #0b3076;  /* Your theme color */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;         /* Top/Bottom: 12px, Left/Right: 24px */
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.custom-register-btn:hover {
+  background-color: #082458;  /* Slightly darker on hover */
+  color: #fff;
+}
+
+.btn-register-now {
+  background: linear-gradient(45deg, #0E9AA7, #0072ff);
+  color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  transition: all 0.4s ease;
+  animation: none; /* Removed pulse to reduce distraction */
+  box-shadow: 0 8px 18px rgba(0, 114, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.btn-register-now:hover {
+  background: linear-gradient(45deg, #0072ff, #0E9AA7);
+  box-shadow: 0 10px 28px rgba(0, 114, 255, 0.45);
+  transform: translateY(-3px);
+}
+
+.btn-register-now::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.btn-register-now:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #0072ff;
+  border: 2px solid #0072ff;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: #0072ff;
+  color: white;
+}
+
+/* pannel */
+/* Panel Discussion Section Styles */
+.card-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0c3d57;
+}
+
+.card-box {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-box:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 145px;
+  left: 20px;
+  background-color: #0c3d57;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #0c3d57;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #444;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 12px;
+}
+
+.card-link {
+  font-weight: 600;
+  color: #0c3d57;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  margin-top: auto;
+  display: inline-block;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Ensure Equal Height for Cards */
+.row > div {
+  display: flex;
+}
+
+.card-box {
+  flex: 1;
+}
+
+/* Responsive Fixes */
+@media (max-width: 991.98px) {
+  .card-img-top {
+    height: 160px;
+  }
+
+  .icon-wrapper {
+    top: 125px;
+    left: 16px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card-img-top {
+    height: 140px;
+  }
+
+  .icon-wrapper {
+    top: 115px;
+    left: 14px;
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .card-link {
+    font-size: 0.9rem;
+  }
+}
+.lead {
+  font-size: 1.5rem; /* Default Bootstrap size is ~1.25rem, increase if needed */
+  line-height: 1.9;
+  font-weight: 500;
+}
+/*---------------------------------focus areas  */
+/* Featured Destinations Section */
+.featured-destinations .featured-destination {
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.featured-destinations .featured-destination:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.featured-destinations .featured-destination .destination-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.featured-destinations .featured-destination .destination-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.featured-destinations .featured-destination .destination-overlay:hover img {
+  transform: scale(1.08);
+}
+
+.featured-destinations .featured-destination .destination-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  z-index: 2;
+  color: white;
+}
+
+.featured-destinations .featured-destination .explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.featured-destinations .featured-destination .explore-btn:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* Compact Destination Cards (AI, Sustainability, Cybersecurity) */
+.featured-destinations .compact-destination {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 180px;
+}
+
+.featured-destinations .compact-destination:hover {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+  transform: translateX(8px);
+}
+
+.featured-destinations .compact-destination .destination-image {
+  flex-shrink: 0;
+  width: 140px;
+  overflow: hidden;
+}
+
+.featured-destinations .compact-destination .destination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featured-destinations .compact-destination:hover .destination-image img {
+  transform: scale(1.1);
+}
+
+.featured-destinations .compact-destination .destination-details {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-destinations .compact-destination .destination-details h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #103379;
+  margin-bottom: 8px;
+}
+
+.featured-destinations .compact-destination .destination-details .brief {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+.compact-destination {
+  width: 100%; /* makes all same width in container */
+  min-height: 120px; /* optional for vertical consistency */
+}
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .featured-destinations .featured-destination {
+    height: 450px;
+    margin-bottom: 30px;
+  }
+
+  .featured-destinations .compact-destination {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .featured-destinations .compact-destination .destination-image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .featured-destinations .compact-destination .destination-details {
+    padding: 15px;
+  }
+}
+/*---------------contact us--------------*/
+ /*contact*/
+ .contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid #28a7e6; /* Accent line */
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.contact-card {
+  min-width: 300px;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.panelist-scroll {
+  height: 120px; /* adjust as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.panelist-track {
+  display: flex;
+  animation: scrollPanelists 20s linear infinite;
+}
+
+.panelist-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #0c3d57;
+}
+
+@keyframes scrollPanelists {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* adjust for number of images */
+}
