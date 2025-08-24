@@ -699,3 +699,34 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* adjust for number of images */
 }
+/* Keynote Section */
+#keynote {
+  background: #f9f9f9;
+}
+
+#keynote .section-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+#keynote .speaker-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#keynote .speaker-role {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#keynote .keynote-img {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  max-height: 380px;
+  object-fit: cover;
+}

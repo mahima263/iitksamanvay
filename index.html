@@ -233,6 +233,434 @@
 
     </div>
   </section>
+  <!-- Keynote Speaker Section -->
+
+  <!-- Keynote Speaker Section -->
+  <!-- Keynote Speaker Section -->
+  <!-- Keynote Speaker Section with Panelists CTA -->
+  <!-- Keynote Speaker Section with Panelists CTA -->
+  <section class="keynote" aria-labelledby="keynote-heading">
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #06b6d4;
+        --accent-2: #22d3ee;
+        --ring: rgba(34, 211, 238, 0.35);
+      }
+
+      .keynote {
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        background: radial-gradient(1200px 600px at 80% -20%, rgba(34, 211, 238, 0.12), transparent 60%),
+          radial-gradient(900px 500px at -10% 120%, rgba(59, 130, 246, 0.10), transparent 60%),
+          var(--bg);
+        color: var(--text);
+        padding: 56px 20px;
+      }
+
+      .keynote .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .keynote .hdr {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .keynote .eyebrow {
+        font-size: 12px;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .keynote h2 {
+        font-size: clamp(24px, 2.4vw, 36px);
+        margin: 0;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .keynote .grid {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 28px;
+      }
+
+      @media (max-width: 900px) {
+        .keynote .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .speaker-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+      }
+
+      .speaker-media {
+        position: relative;
+        aspect-ratio: 4/5;
+        background: #0b1220;
+      }
+
+      .speaker-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: saturate(1.05);
+      }
+
+      .badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: var(--text);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+      }
+
+      .speaker-meta {
+        padding: 18px 18px 20px;
+      }
+
+      .speaker-name {
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 6px;
+      }
+
+      .speaker-role {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 0 14px;
+      }
+
+      .talk-blurb {
+        color: #cbd5e1;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .content-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+      }
+
+      .highlights {
+        margin: 16px 0 22px;
+      }
+
+      .panel-img img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: #062026;
+        border: none;
+        padding: 14px 18px;
+        border-radius: 14px;
+        transition: transform .15s ease, box-shadow .15s ease;
+        box-shadow: 0 10px 22px var(--ring);
+        width: fit-content;
+      }
+
+      .cta:focus {
+        outline: 2px solid var(--accent-2);
+        outline-offset: 3px;
+      }
+
+      .cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 28px var(--ring);
+      }
+
+      .subtle {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+    </style>
+
+    <div class="container">
+
+
+      <div class="grid">
+        <!-- Speaker Card -->
+        <article class="speaker-card" aria-label="Keynote speaker profile">
+          <div class="speaker-media">
+            <img src="Harrick Vin.jpg" alt="Portrait of Dr. Harrick Vin" loading="lazy" />
+            <span class="badge" aria-hidden="true">Keynote <br /> Speaker</span>
+          </div>
+          <div class="speaker-meta">
+            <h3 class="speaker-name">Dr. Harrick Vin</h3>
+            <p class="speaker-role">Chief Services Innovation Officer, TCS</p>
+            <p class="talk-blurb">Dr. Harrick Vin is the Chief Services Innovation Officer at Tata Consultancy Services (TCS), a TCS Fellow, FNAE Fellow, and Distinguished Alumnus of IIT Bombay.
+              He was the Founder & CEO of Digitate, where he led the design of ignio™, the world’s first cognitive automation product for enterprise IT. Earlier, he served as Vice President & Chief Scientist at TRDDC (TCS).
+              
+              Before TCS, he spent 15 years as Professor of Computer Sciences at the University of Texas at Austin, founding research labs in distributed systems and multimedia computing.
+              
+              </p>
+          </div>
+        </article>
+
+        <!-- Panelists Image & CTA -->
+        <div class="content-card">
+          <div class="highlights">
+            <div class="panel-img">
+              <!-- Replace with your uploaded collage image -->
+              <img src="Collage_Speaker_Mobile.jpg" alt="Panelists Group Photo" loading="lazy">
+            </div>
+          </div>
+
+          <div>
+            <!-- CTA: Update href to actual panelist page -->
+            <a class="cta" href="panellist.html" aria-label="View all panelists">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 12h18" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+              View All Panelists
+            </a>
+            <p class="subtle">Explore the full list of distinguished speakers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Keynote Speaker Section -->
+
+  <!-- End Keynote Speaker Section -->
+
+  <!-- End Keynote Speaker Section -->
+
+
+
+  <!-- Keynote Section Professional -->
+  <!-- Keynote Speaker Section -->
+  <section class="keynote-pro" aria-labelledby="keynote-pro-heading">
+    <div class="container">
+      <div class="keynote-card">
+        <div class="speaker-img">
+          <img src="Harrick Vin.jpg" alt="Portrait of Dr. Harrick Vin">
+        </div>
+        <div class="speaker-info">
+          <h2 id="keynote-pro-heading">Keynote Speaker</h2>
+          <h3>Dr. Harrick Vin</h3>
+          <p class="role">Chief Services Innovation Officer, TCS</p>
+          <p class="blurb">
+            Dr. Harrick Vin is the Chief Services Innovation Officer at Tata Consultancy Services (TCS), a TCS Fellow, FNAE Fellow, and Distinguished Alumnus of IIT Bombay.
+          </p>
+          <a href="panellist.html" class="cta">Know More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Panelists Section -->
+  <section class="panelists-pro">
+    <div class="container-fluid panelists-wrapper">
+      <div class="panelists-img">
+
+        <!-- Desktop Image -->
+        <img src="Collage_Speaker.jpg" alt="Panelists Group Photo" class="img-fluid d-none d-md-block">
+
+        <!-- Mobile Image -->
+        <img src="Collage_Speaker_mobile.jpg" alt="Panelists Mobile View" class="img-fluid d-block d-md-none">
+
+        <div class="overlay-cta">
+          <a href="#" class="cta">Meet the Panellists</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <style>
+    /* ===================== KEYNOTE ===================== */
+    .keynote-pro {
+      background: #f9fafb;
+      /* light bg */
+      padding: 60px 20px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    .keynote-card {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+    }
+
+    /* Speaker Image */
+    .keynote-card .speaker-img img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Info */
+    .keynote-card .speaker-info h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .keynote-card .speaker-info h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .keynote-card .speaker-info .role {
+      font-size: 15px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .keynote-card .speaker-info .blurb {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+
+    /* CTA */
+    .keynote-card .cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #06b6d4, #22d3ee);
+      color: #062026;
+      padding: 12px 24px;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all .2s ease;
+    }
+
+    .keynote-card .cta:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ✅ Mobile Responsive: vertical card */
+    @media (max-width: 768px) {
+      .keynote-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .keynote-card .speaker-img img {
+        max-width: 100%;
+      }
+    }
+
+    /* ===================== PANELISTS ===================== */
+    .panelists-pro {
+      margin-top: 0;
+      position: relative;
+    }
+
+    .panelists-wrapper {
+      position: relative;
+      padding: 0;
+    }
+
+    .panelists-img {
+      position: relative;
+      width: 100%;
+    }
+
+    .panelists-img img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Overlay Button */
+    .overlay-cta {
+      position: absolute;
+      bottom: 30px;
+      /* image ke neeche se distance */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .overlay-cta .cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #06b6d4, #22d3ee);
+      color: #062026;
+      padding: 16px 34px;
+      font-weight: 700;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 12px 26px rgba(34, 211, 238, 0.35);
+      transition: all 0.25s ease;
+    }
+
+    .overlay-cta .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px rgba(34, 211, 238, 0.45);
+    }
+
+    /* Mobile CTA adjust */
+    @media (max-width: 767px) {
+      .overlay-cta .cta {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 10px;
+      }
+
+      .overlay-cta {
+        bottom: 10%;
+        /* neeche shift */
+        top: auto;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
 
   <!---------------------------------Panel discussion--------->
 
@@ -288,34 +716,11 @@
     </div>
   </section>
 
+
+
+
+
  
-   
-  
- 
-  <section class="position-relative text-center  mb-4">
-    <!-- Full width image -->
-    <img src="Collage_Speaker.jpg" class="w-100" style="height: auto;" alt="Banner Image">
-  
-    <!-- Bottom CTA -->
-    <a href="panellist.html" 
-       class="btn position-absolute bottom-0 start-50 translate-middle-x mb-3 btn-lg"
-       style="background:#ffffff; color:#0c3d57; padding: 12px 30px; font-weight:bold; 
-              box-shadow: 0 8px 20px rgba(0,0,0,0.3); border-radius: 10px; transition: all 0.3s ease;">
-      EXPLORE PANELS
-    </a>
-  </section>
-  
-  <style>
-    /* Mobile adjustments */
-    @media (max-width: 576px) {
-      a.btn {
-        padding: 2px 4px !important; /* Reduced padding for mobile */
-        font-size: 0.85rem;           /* Slightly smaller text */
-      }
-    }
-  </style>
-  
-  
   <!------------------------------focus areas-->
   <!-----------------thematic Focus Areas-->
   <section id="featured-destinations" class="featured-destinations section mt-2">
