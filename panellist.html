@@ -299,6 +299,22 @@
     transform: translateY(0); /* Reset on click */
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
+/* Fix Read More button at bottom of card */
+.panelist-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.panelist-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.panelist-card .actions {
+  margin-top: auto; /* ✅ Button neeche chala jayega */
+  padding:15px;
+}
 
   </style>
 </head>
