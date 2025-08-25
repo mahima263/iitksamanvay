@@ -212,27 +212,61 @@
   <style>
     /* Mobile ke liye custom font sizes */
     /* Mobile ke liye custom styles */
-@media (max-width: 576px) {
+    @media (max-width: 576px) {
+  /* Headings and Text */
   h1.keynote-heading {
-    font-size: 1.6rem !important;   /* aur chhota kar diya */
-    line-height: 1.2 !important;    /* line gap kam kiya */
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
   }
+
   h2.keynote-name {
     font-size: 1.3rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
   }
+
   h3.keynote-title {
     font-size: 0.95rem !important;
   }
+
   p.keynote-bio {
     font-size: 0.9rem !important;
   }
 
-  /* Image border aur shadow ko halka kar diya */
+  /* Image Styling */
   .keynote-speaker-img {
+    max-height: 300px !important;
+    object-fit: contain !important;
     border-width: 2px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important; /* halka shadow */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Container and Card Padding */
+  .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .card {
+    padding: 1.5rem !important;
+  }
+
+  /* Column Layout Fix */
+  .col-xl-6, .col-lg-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Button Styling (optional tweak) */
+  .btn {
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 0.75rem 1rem !important;
   }
 }
+
 
   </style>
   
