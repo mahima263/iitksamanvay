@@ -210,12 +210,11 @@
   </section>
   
   <style>
-    /* Mobile ke liye custom font sizes */
-    /* Mobile ke liye custom styles */
-    @media (max-width: 576px) {
+   @media (max-width: 576px) {
   /* Headings and Text */
   h1.keynote-heading {
     font-size: 1.5rem !important;
+    line-height: 1.2 !important;
     margin-bottom: 1rem !important;
   }
 
@@ -239,6 +238,7 @@
     object-fit: contain !important;
     border-width: 0.5px !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    margin-bottom: 1rem !important; /* Controlled spacing below image */
   }
 
   /* Container and Card Padding */
@@ -257,13 +257,19 @@
     max-width: 100% !important;
   }
 
-  /* Button Styling (optional tweak) */
+  /* Row Gap Adjustment */
+  .row.g-5 {
+    row-gap: 1rem !important;
+  }
+
+  /* Button Styling */
   .btn {
     width: 100% !important;
     font-size: 1rem !important;
     padding: 0.75rem 1rem !important;
   }
 }
+
 
 
   </style>
