@@ -169,328 +169,77 @@
     </div>
   </section>
   <!------------------------Timer-->
-  <!-----------------------------Timer-->
-  <section class="timerbody mb-4" id="agenda">
-    <div class="container mt-3">
-      <h1 class="text-center mb-5">Countdown to IITK Samanvay</h1>
-
-      <!-- Countdown Timer -->
-      <div class="row justify-content-center" id="countdown-timer">
-        <div class="col-md-2 col-sm-3 col-6">
-          <div class="countdown-box">
-            <h2 id="days">00</h2>
-            <p>DAYS</p>
+ 
+  
+  <!-- Keynote Section Professional -->
+  <section class="py-5 bg-light">
+    <div class="container-fluid px-5">
+      <div class="card shadow-lg border-0 rounded-5 p-5 bg-white">
+        <div class="row g-5 align-items-center">
+          
+          <!-- Speaker Image -->
+          <div class="col-xl-6 col-lg-6 text-center">
+            <img src="keynote_1.jpg" 
+                 alt="Dr. Harrick Vin - Keynote Speaker" 
+                 class="img-fluid rounded-5 shadow-lg border  border-primary keynote-speaker-img"
+                 style="max-height: 700px; width: 100%; object-fit: cover;">
           </div>
-        </div>
-        <div class="col-md-2 col-sm-3 col-6">
-          <div class="countdown-box">
-            <h2 id="hours">00</h2>
-            <p>HOURS</p>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-3 col-6">
-          <div class="countdown-box">
-            <h2 id="minutes">00</h2>
-            <p>MINUTES</p>
-          </div>
-        </div>
-        <div class="col-md-2 col-sm-3 col-6">
-          <div class="countdown-box">
-            <h2 id="seconds">00</h2>
-            <p>SECONDS</p>
-          </div>
-        </div>
-      </div>
+          
+          <!-- Speaker Info -->
+          <div class="col-xl-6 col-lg-6">
+            <div class="px-4">
+              <h1 class="fw-semibold display-3 mb-6 keynote-heading" style="color:#0c3d57;">Keynote Speaker</h1>
 
-      <!-- Register Button -->
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-4 mb-4">
-          <a href=" https://zfrmz.in/0rb8QnYvfzhguWQmcYiv" target="_blank"
-            class="btn custom-register-btn w-100 text-white text-decoration-none">
-            REGISTER NOW
-          </a>
-        </div>
-      </div>
-
-      <!-- Agenda & Brochure Buttons -->
-      <div class="row justify-content-center">
-        <div class="col-md-3 col-sm-6 mb-3">
-          <a href="https://iitk.ac.in/dora/iitk-samanvay-2025/iitk-samanvay-agenda-2025.pdf" target="_blank"
-            class="btn btn-secondary w-100">Agenda</a>
-        </div>
-
-
-
-
-
-
-
-        <div class="col-md-3 col-sm-6 mb-3">
-          <a href="images/samanvay_report__2025_1.pdf" target="_blank" class="btn btn-secondary w-100">REPORT 2024</a>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-  <!-- Keynote Speaker Section -->
-
-  <!-- Keynote Speaker Section -->
-  <!-- Keynote Speaker Section -->
-  <!-- Keynote Speaker Section with Panelists CTA -->
-  <!-- Keynote Speaker Section with Panelists CTA -->
-  <section class="keynote" aria-labelledby="keynote-heading">
-    <style>
-      :root {
-        --bg: #0f172a;
-        --card: #111827;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --accent: #06b6d4;
-        --accent-2: #22d3ee;
-        --ring: rgba(34, 211, 238, 0.35);
-      }
-
-      .keynote {
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-        background: radial-gradient(1200px 600px at 80% -20%, rgba(34, 211, 238, 0.12), transparent 60%),
-          radial-gradient(900px 500px at -10% 120%, rgba(59, 130, 246, 0.10), transparent 60%),
-          var(--bg);
-        color: var(--text);
-        padding: 56px 20px;
-      }
-
-      .keynote .container {
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      .keynote .hdr {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-bottom: 28px;
-      }
-
-      .keynote .eyebrow {
-        font-size: 12px;
-        letter-spacing: .16em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      .keynote h2 {
-        font-size: clamp(24px, 2.4vw, 36px);
-        margin: 0;
-        font-weight: 700;
-        line-height: 1.2;
-      }
-
-      .keynote .grid {
-        display: grid;
-        grid-template-columns: 420px 1fr;
-        gap: 28px;
-      }
-
-      @media (max-width: 900px) {
-        .keynote .grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .speaker-card {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-        overflow: hidden;
-      }
-
-      .speaker-media {
-        position: relative;
-        aspect-ratio: 4/5;
-        background: #0b1220;
-      }
-
-      .speaker-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        filter: saturate(1.05);
-      }
-
-      .badge {
-        position: absolute;
-        top: 14px;
-        left: 14px;
-        background: rgba(15, 23, 42, 0.7);
-        backdrop-filter: blur(6px);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        color: var(--text);
-        padding: 6px 10px;
-        border-radius: 999px;
-        font-size: 12px;
-        letter-spacing: .06em;
-        text-transform: uppercase;
-      }
-
-      .speaker-meta {
-        padding: 18px 18px 20px;
-      }
-
-      .speaker-name {
-        font-size: 22px;
-        font-weight: 700;
-        margin: 0 0 6px;
-      }
-
-      .speaker-role {
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.5;
-        margin: 0 0 14px;
-      }
-
-      .talk-blurb {
-        color: #cbd5e1;
-        font-size: 15px;
-        line-height: 1.7;
-      }
-
-      .content-card {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100%;
-      }
-
-      .highlights {
-        margin: 16px 0 22px;
-      }
-
-      .panel-img img {
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
-      }
-
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        font-weight: 600;
-        text-decoration: none;
-        cursor: pointer;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: #062026;
-        border: none;
-        padding: 14px 18px;
-        border-radius: 14px;
-        transition: transform .15s ease, box-shadow .15s ease;
-        box-shadow: 0 10px 22px var(--ring);
-        width: fit-content;
-      }
-
-      .cta:focus {
-        outline: 2px solid var(--accent-2);
-        outline-offset: 3px;
-      }
-
-      .cta:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 14px 28px var(--ring);
-      }
-
-      .subtle {
-        font-size: 13px;
-        color: var(--muted);
-        margin-top: 8px;
-      }
-    </style>
-
-    <div class="container">
-
-
-      <div class="grid">
-        <!-- Speaker Card -->
-        <article class="speaker-card" aria-label="Keynote speaker profile">
-          <div class="speaker-media">
-            <img src="Harrick Vin.jpg" alt="Portrait of Dr. Harrick Vin" loading="lazy" />
-            <span class="badge" aria-hidden="true">Keynote <br /> Speaker</span>
-          </div>
-          <div class="speaker-meta">
-            <h3 class="speaker-name">Dr. Harrick Vin</h3>
-            <p class="speaker-role">Chief Services Innovation Officer, TCS</p>
-            <p class="talk-blurb">Dr. Harrick Vin is the Chief Services Innovation Officer at Tata Consultancy Services (TCS), a TCS Fellow, FNAE Fellow, and Distinguished Alumnus of IIT Bombay.
-              He was the Founder & CEO of Digitate, where he led the design of ignio™, the world’s first cognitive automation product for enterprise IT. Earlier, he served as Vice President & Chief Scientist at TRDDC (TCS).
+              <h2 class="fw-semibold text-dark mt-5 mb-3 keynote-name">Dr. Harrick Vin</h2>
               
-              Before TCS, he spent 15 years as Professor of Computer Sciences at the University of Texas at Austin, founding research labs in distributed systems and multimedia computing.
+              <h3 class="text-muted mb-2 keynote-title ">Chief Technology Officer</h3>
+              <h3 class="text-muted mb-4 keynote-title ">Tata Consultancy Services (TCS)</h3>
               
+              <p class="fs-4 text-secondary mb-5 keynote-bio">
+                Dr. Harrick Vin is the Chief Technology Officer at Tata Consultancy Services (TCS), a TCS Fellow, FNAE Fellow, and Distinguished Alumnus of IIT Bombay.
               </p>
-          </div>
-        </article>
-
-        <!-- Panelists Image & CTA -->
-        <div class="content-card">
-          <div class="highlights">
-            <div class="panel-img">
-              <!-- Replace with your uploaded collage image -->
-              <img src="Collage_Speaker_Mobile.jpg" alt="Panelists Group Photo" loading="lazy">
+              <a href="panellist.html" class="btn btn-primary btn-lg px-5 py-3 fs-5">
+                KNOW MORE
+              </a>
             </div>
           </div>
-
-          <div>
-            <!-- CTA: Update href to actual panelist page -->
-            <a class="cta" href="panellist.html" aria-label="View all panelists">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path d="M3 12h18" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-              View All Panelists
-            </a>
-            <p class="subtle">Explore the full list of distinguished speakers</p>
-          </div>
+  
         </div>
       </div>
     </div>
   </section>
-  <!-- End Keynote Speaker Section -->
+  
+  <style>
+    /* Mobile ke liye custom font sizes */
+    /* Mobile ke liye custom styles */
+@media (max-width: 576px) {
+  h1.keynote-heading {
+    font-size: 1.6rem !important;   /* aur chhota kar diya */
+    line-height: 1.2 !important;    /* line gap kam kiya */
+  }
+  h2.keynote-name {
+    font-size: 1.3rem !important;
+  }
+  h3.keynote-title {
+    font-size: 0.95rem !important;
+  }
+  p.keynote-bio {
+    font-size: 0.9rem !important;
+  }
 
-  <!-- End Keynote Speaker Section -->
+  /* Image border aur shadow ko halka kar diya */
+  .keynote-speaker-img {
+    border-width: 2px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important; /* halka shadow */
+  }
+}
 
-  <!-- End Keynote Speaker Section -->
-
-
-
-  <!-- Keynote Section Professional -->
-  <!-- Keynote Speaker Section -->
-  <section class="keynote-pro" aria-labelledby="keynote-pro-heading">
-    <div class="container">
-      <div class="keynote-card">
-        <div class="speaker-img">
-          <img src="Harrick Vin.jpg" alt="Portrait of Dr. Harrick Vin">
-        </div>
-        <div class="speaker-info">
-          <h2 id="keynote-pro-heading">Keynote Speaker</h2>
-          <h3>Dr. Harrick Vin</h3>
-          <p class="role">Chief Services Innovation Officer, TCS</p>
-          <p class="blurb">
-            Dr. Harrick Vin is the Chief Services Innovation Officer at Tata Consultancy Services (TCS), a TCS Fellow, FNAE Fellow, and Distinguished Alumnus of IIT Bombay.
-          </p>
-          <a href="panellist.html" class="cta">Know More</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </style>
+  
+  
+  
+  
+  
   <!-- Panelists Section -->
   <section class="panelists-pro">
     <div class="container-fluid panelists-wrapper">
@@ -503,7 +252,7 @@
         <img src="Collage_Speaker_Mobile.jpg" alt="Panelists Mobile View" class="img-fluid d-block d-md-none">
 
         <div class="overlay-cta">
-          <a href="#" class="cta">Meet the Panellists</a>
+          <a href="panellist.html" class="cta">View Panellists</a>
         </div>
       </div>
     </div>
@@ -654,7 +403,7 @@
       }
 
       .overlay-cta {
-        bottom: 10%;
+        bottom: 5%;
         /* neeche shift */
         top: auto;
         transform: translateX(-50%);
@@ -679,7 +428,7 @@
               <p class="card-text" style="margin-bottom: 30px;">
                 Translational Research in AI, Sustainability & Cybersecurity
               </p>
-              <a href="#" class="card-link">Panel Discussion 1</a>
+              <a href="panellist.html" class="card-link">Panel Discussion 1</a>
             </div>
           </div>
         </div>
@@ -692,7 +441,7 @@
             <div class="card-body">
               <h5 class="card-title">Purpose-Driven Technology</h5>
               <p class="card-text">Using CSR to Fuel Innovation in AI, Sustainability & Cybersecurity</p>
-              <a href="#" class="card-link">Panel Discussion 2</a>
+              <a href="panellist.html" class="card-link">Panel Discussion 2</a>
             </div>
           </div>
         </div>
@@ -707,7 +456,7 @@
               </h5>
               <p class="card-text" style="margin-bottom: 30px;">How MSMEs and academia can shape a Self-Reliant India
               </p>
-              <a href="#" class="card-link">Panel Discussion 3</a>
+              <a href="panellist.html" class="card-link">Panel Discussion 3</a>
             </div>
           </div>
         </div>
@@ -783,8 +532,6 @@
                 <div class="destination-details">
                   <h3>Cybersecurity</h3>
                   <p class="brief">Safeguarding digital infrastructure through resilient, scalable solutions.</p>
-
-
                 </div>
               </div>
             </div>
@@ -795,7 +542,69 @@
       </div>
     </div>
   </section>
+  <section class="timerbody mb-4 mt-4" id="agenda">
+    <div class="container mt-3">
+      <h2 class="section-title mb-6">Countdown for IITK Samanvay</h2>
 
+      <!-- Countdown Timer -->
+      <div class="row justify-content-center mt-2" id="countdown-timer">
+        <div class="col-md-2 col-sm-3 col-6">
+          <div class="countdown-box">
+            <h2 id="days">00</h2>
+            <p>DAYS</p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-3 col-6">
+          <div class="countdown-box">
+            <h2 id="hours">00</h2>
+            <p>HOURS</p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-3 col-6">
+          <div class="countdown-box">
+            <h2 id="minutes">00</h2>
+            <p>MINUTES</p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-3 col-6">
+          <div class="countdown-box">
+            <h2 id="seconds">00</h2>
+            <p>SECONDS</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Register Button -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-4 mb-4">
+          <a href=" https://zfrmz.in/0rb8QnYvfzhguWQmcYiv" target="_blank"
+            class="btn custom-register-btn w-100 text-white text-decoration-none">
+            REGISTER NOW
+          </a>
+        </div>
+      </div>
+
+      <!-- Agenda & Brochure Buttons -->
+      <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <a href="https://iitk.ac.in/dora/iitk-samanvay-2025/iitk-samanvay-agenda-2025.pdf" target="_blank"
+            class="btn btn-secondary w-100">Agenda</a>
+        </div>
+
+
+
+
+
+
+
+        <div class="col-md-3 col-sm-6 mb-3">
+          <a href="images/samanvay_report__2025_1.pdf" target="_blank" class="btn btn-secondary w-100">REPORT 2024</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
   <!--------------IITcampus-->
   <div class="venue bg-light container-fluid py-5">
     <div class="row align-items-center">

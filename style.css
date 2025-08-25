@@ -221,7 +221,7 @@ body {
 /* timer */
 /* Timer Section */
 .timerbody {
-  background: linear-gradient(135deg, #AEE6F9 0%, #3BAFDA 100%);
+  background:url('timerbanner.jpeg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -262,6 +262,10 @@ body {
   margin: 0;
   display: inline-block;
   transition: transform 0.3s ease-in-out;
+}
+.timerbody h1 {
+  font-size: 4rem;
+  color: #082458;
 }
 .countdown-box p {
   font-size: 1.2rem;
@@ -700,33 +704,3 @@ body {
   100% { transform: translateX(-50%); } /* adjust for number of images */
 }
 /* Keynote Section */
-#keynote {
-  background: #f9f9f9;
-}
-
-#keynote .section-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  color: var(--brand);
-}
-
-#keynote .speaker-name {
-  font-family: 'Raleway', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-#keynote .speaker-role {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-#keynote .keynote-img {
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  max-height: 380px;
-  object-fit: cover;
-}
